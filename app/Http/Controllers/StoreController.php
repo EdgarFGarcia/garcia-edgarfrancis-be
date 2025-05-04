@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Htttp\Controllers\API;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
@@ -12,7 +12,7 @@ use App\Request\{
     StoreRequest
 };
 
-class StoreControllers extends Controller
+class StoreController extends Controller
 {
     /**immutable constructor */
     function __construct(
@@ -28,10 +28,7 @@ class StoreControllers extends Controller
      */
     public function getAllStore() : mixed {
         try{
-            return repsonse()->json([
-                'response'  => true,
-                'data'      => $this->storeService->getAllStore(),
-            ]);
+            return response()->json($this->storeService->getAllStore());
         }catch(\Exception $e){
             return $this->getError($e, 500);
         }

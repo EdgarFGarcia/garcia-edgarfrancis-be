@@ -1,7 +1,8 @@
 <?php
 
-namesapce App\Repository;
+namespace App\Repository;
 
+use Illuminate\Database\Eloquent\Model;
 use App\Repository\Contracts\BaseRepositoryInterface;
 
 class BaseRepository implements BaseRepositoryInterface

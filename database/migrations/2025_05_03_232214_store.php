@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('address')->nullable();
+            $table->tinyInteger('is_open')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

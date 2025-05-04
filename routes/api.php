@@ -10,7 +10,7 @@ Route::group([
     Route::group([
         "prefix" => "store"
     ], function (){
-        Route::get("/", [\App\Http\Controllers\API\StoreControllers::class, "getAllStore"]);
-        Route::get("/{id?}", [\App\Http\Controllers\API\StoreControllers::class, "getStoreById"]);
+        Route::get("/", [\App\Http\Controllers\StoreController::class, "getAllStore"]);
+        Route::get("/{id?}", [\App\Http\Controllers\StoreController::class, "getStoreById"]);
     });
 });

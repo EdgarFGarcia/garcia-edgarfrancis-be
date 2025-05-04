@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Services;
 
 use App\Models\Store;
@@ -21,7 +23,7 @@ class StoreService
     * @return mixed
     */
     public function getAllStore() : mixed {
-        return $this->repository->getAll();
+        return $this->repository->all();
     }
 
     /**
